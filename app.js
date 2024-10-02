@@ -34,6 +34,8 @@ const btnCalculate = document.getElementById ('btnCalculate')
 
 const response = document.getElementById ('resultado')
 
+const prediction = document.getElementById ('prediction')
+
 btnCalculate.addEventListener('click', calculateNote )
 
 function calculateNote (event){
@@ -47,4 +49,26 @@ function calculateNote (event){
 
     response.style.color = 'blue'
     response.textContent = `SR/SRA/SRE ${username.value} su nota definitiva es: ${result}`
+    definitive1 (result)
+}
+
+function definitive1 (result) {
+
+    if (result < 3.5){
+        response.style.color = 'black'
+        response.textContent = `SR/SRA/SRE ${username.value} ha perdido la nota por debajo de 3.5 y su nota es ${result}`}
+
+        else if (result >= 3.5 && result < 4.5) {
+        response.style.color = 'orange'
+        response.textContent = `SR/SRA/SRE ${username.value} su nota definitiva es: ${result}`}
+
+            else
+                response.style.color = 'green'
+                response.textContent = `SR/SRA/SRE ${username.value} su nota definitiva es: ${result}`
+}
+
+btnPrediction.addEventListener('click', prediction )
+
+function prediction () {
+    let 
 }
